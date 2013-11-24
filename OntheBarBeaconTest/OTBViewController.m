@@ -21,6 +21,8 @@
     
     self.regionManager = [OTBRegionManager sharedInstance];
     self.regionManager.delegate = self;
+    
+    self.locationServices = [OTBLocationServices sharedInstance];
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,7 +32,17 @@
 }
 
 - (IBAction)broadcastingWasToggled:(id)sender {
-    [self.regionManager beginRegionBroadcast];
+    if(self.regionManager.isAvertising) {
+        [self.regionManager stopAdvertising];
+    } else {
+        [self.regionManager beginRegionBroadcast];
+    }
+    
+    [self updateButton];
+}
+
+- (IBAction)searchWasToggled:(id)sender {
+    [self.locationServices.locationManager startMonitoringForRegion:self.regionManager.otbRegion];
 }
 
 - (void)regionManagerStatusChangedTo:(NSString *)status {

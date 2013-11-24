@@ -23,6 +23,8 @@
 - (void)stopAdvertising;
 - (BOOL)isAvertising;
 
+- (CLBeaconRegion *)otbRegion;
+
 @property (strong, nonatomic) CBPeripheralManager *perhipheralManager;
 @property (weak, nonatomic) id<OTBRegionManagerDelegate> delegate;
 @property (strong, nonatomic) NSUUID *otbUUID;

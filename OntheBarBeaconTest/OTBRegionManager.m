@@ -36,17 +36,25 @@ static OTBRegionManager *sharedInstance = nil;
     return self;
 }
 
+- (CLBeaconRegion *)otbRegion {
+    return [[CLBeaconRegion alloc] initWithProximityUUID:self.otbUUID identifier:@"onthebarRegion"];
+}
+
 - (void)startAdvertisingRegion {
-    CLBeaconRegion *advertisingRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.otbUUID major:10 minor:5 identifier:@"bartender_133"];
+    CLBeaconRegion *advertisingRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.otbUUID major:10 minor:5 identifier:@"onthebarRegion"];
     
     NSDictionary *beaconConfig = [advertisingRegion peripheralDataWithMeasuredPower:nil];
     
     [self.perhipheralManager startAdvertising:beaconConfig];
     [self.delegate regionManagerStatusChangedTo:[NSString stringWithFormat:@"Broadcasting for region with UUID %@", self.otbUUID]];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 - (void)stopAdvertising {
     [self.perhipheralManager stopAdvertising];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 - (BOOL)isAvertising {

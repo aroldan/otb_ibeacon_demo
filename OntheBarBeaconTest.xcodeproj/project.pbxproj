@@ -24,6 +24,7 @@
 		A9552DEA184273820019FE79 /* OTBRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9552DE9184273820019FE79 /* OTBRegionManager.m */; };
 		A9552DEC184274240019FE79 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9552DEB184274240019FE79 /* CoreLocation.framework */; };
 		A9552DEE184274ED0019FE79 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9552DED184274ED0019FE79 /* CoreBluetooth.framework */; };
+		A9552DF118427BE00019FE79 /* OTBLocationServices.m in Sources */ = {isa = PBXBuildFile; fileRef = A9552DF018427BE00019FE79 /* OTBLocationServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		A9552DE9184273820019FE79 /* OTBRegionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTBRegionManager.m; sourceTree = "<group>"; };
 		A9552DEB184274240019FE79 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9552DED184274ED0019FE79 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A9552DEF18427BE00019FE79 /* OTBLocationServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTBLocationServices.h; sourceTree = "<group>"; };
+		A9552DF018427BE00019FE79 /* OTBLocationServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTBLocationServices.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 		A9552DB918426B710019FE79 /* OntheBarBeaconTest */ = {
 			isa = PBXGroup;
 			children = (
+				A9552DEF18427BE00019FE79 /* OTBLocationServices.h */,
+				A9552DF018427BE00019FE79 /* OTBLocationServices.m */,
 				A9552DC218426B710019FE79 /* OTBAppDelegate.h */,
 				A9552DC318426B710019FE79 /* OTBAppDelegate.m */,
 				A9552DC518426B710019FE79 /* Main.storyboard */,
@@ -267,6 +272,7 @@
 				A9552DEA184273820019FE79 /* OTBRegionManager.m in Sources */,
 				A9552DCA18426B710019FE79 /* OTBViewController.m in Sources */,
 				A9552DC018426B710019FE79 /* main.m in Sources */,
+				A9552DF118427BE00019FE79 /* OTBLocationServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
