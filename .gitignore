@@ -1,0 +1,25 @@
+# CocoaPods
+Pods
+Podfile.lock
+
+# OS X
+.DS_Store
+
+# build
+build/
+
+# xcode trash
+*~.nib
+*.pbxuser
+*.perspective
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xcworkspacedata
+contents.xcworkspacedata
+project.xcworkspace/
+xcuserdata/
+Onthebar.xcworkspace/contents.xcworkspacedata
+
+node_modules/
