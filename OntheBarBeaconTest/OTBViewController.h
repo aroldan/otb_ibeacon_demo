@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OTBRegionManager.h"
 
-@interface OTBViewController : UIViewController
+@interface OTBViewController : UIViewController<OTBRegionManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *broadcastToggleButton;
 @property (weak, nonatomic) IBOutlet UITextView *statusText;
+@property (strong, nonatomic) OTBRegionManager *regionManager;
 - (IBAction)broadcastingWasToggled:(id)sender;
 
 @end

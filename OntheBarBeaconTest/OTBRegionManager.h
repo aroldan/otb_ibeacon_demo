@@ -8,9 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface OTBRegionManager : NSObject
+@protocol OTBRegionManagerDelegate <NSObject>
+
+- (void)regionManagerStatusChangedTo:(NSString *)status;
+
+@end
+
+@interface OTBRegionManager : NSObject<CBPeripheralManagerDelegate>
 
 + (instancetype)sharedInstance;
+- (void)beginRegionBroadcast;
+- (void)stopAdvertising;
+- (BOOL)isAvertising;
+
+@property (strong, nonatomic) CBPeripheralManager *perhipheralManager;
+@property (weak, nonatomic) id<OTBRegionManagerDelegate> delegate;
+@property (strong, nonatomic) NSUUID *otbUUID;
 
 @end

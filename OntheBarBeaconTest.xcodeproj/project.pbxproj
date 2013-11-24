@@ -23,6 +23,7 @@
 		A9552DDF18426B710019FE79 /* OntheBarBeaconTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9552DDE18426B710019FE79 /* OntheBarBeaconTestTests.m */; };
 		A9552DEA184273820019FE79 /* OTBRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9552DE9184273820019FE79 /* OTBRegionManager.m */; };
 		A9552DEC184274240019FE79 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9552DEB184274240019FE79 /* CoreLocation.framework */; };
+		A9552DEE184274ED0019FE79 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9552DED184274ED0019FE79 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A9552DE8184273820019FE79 /* OTBRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTBRegionManager.h; sourceTree = "<group>"; };
 		A9552DE9184273820019FE79 /* OTBRegionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTBRegionManager.m; sourceTree = "<group>"; };
 		A9552DEB184274240019FE79 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A9552DED184274ED0019FE79 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9552DEE184274ED0019FE79 /* CoreBluetooth.framework in Frameworks */,
 				A9552DEC184274240019FE79 /* CoreLocation.framework in Frameworks */,
 				A9552DB618426B710019FE79 /* CoreGraphics.framework in Frameworks */,
 				A9552DB818426B710019FE79 /* UIKit.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		A9552DB218426B710019FE79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9552DED184274ED0019FE79 /* CoreBluetooth.framework */,
 				A9552DEB184274240019FE79 /* CoreLocation.framework */,
 				A9552DB318426B710019FE79 /* Foundation.framework */,
 				A9552DB518426B710019FE79 /* CoreGraphics.framework */,
@@ -471,6 +475,7 @@
 				A9552DE418426B710019FE79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9552DE518426B710019FE79 /* Build configuration list for PBXNativeTarget "OntheBarBeaconTestTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +484,7 @@
 				A9552DE718426B710019FE79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

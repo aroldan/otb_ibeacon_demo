@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.regionManager = [OTBRegionManager sharedInstance];
+    self.regionManager.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,5 +30,25 @@
 }
 
 - (IBAction)broadcastingWasToggled:(id)sender {
+    [self.regionManager beginRegionBroadcast];
 }
+
+- (void)regionManagerStatusChangedTo:(NSString *)status {
+    NSLog(@"Changing status: %@", status);
+    self.statusText.text = status;
+    
+    [self updateButton];
+}
+
+- (void)updateButton {
+    NSString *buttonTitle;
+    if([self.regionManager isAvertising]) {
+        buttonTitle = @"Stop Broadcasting";
+    } else {
+        buttonTitle = @"Start Broadcasting";
+    }
+    
+    [self.broadcastToggleButton setTitle:buttonTitle forState:UIControlStateNormal];
+}
+
 @end
